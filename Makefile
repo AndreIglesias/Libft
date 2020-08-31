@@ -6,7 +6,7 @@
 #    By: ciglesia <ciglesia@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/08/20 22:37:03 by ciglesia          #+#    #+#              #
-#    Updated: 2020/09/01 00:33:45 by ciglesia         ###   ########.fr        #
+#    Updated: 2020/09/01 00:57:01 by ciglesia         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -65,14 +65,14 @@ all		:		$(NAME)
 
 fclean	:		clean
 				@(cd $(SUB_MAKE) && $(MAKE) fclean)
-				-@$(RM) $(NAME)
+				@$(RM) $(NAME)
 				@$(ECHO) '> Remove executable'
 
 re		:		fclean all
 
 printf	:
 				@(cd $(SUB_MAKE) && $(MAKE))
-				-@$(RM) $(NAME)
+				@$(RM) $(NAME)
 
 .PHONY	:		all clean re
 
