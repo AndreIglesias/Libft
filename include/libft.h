@@ -6,7 +6,7 @@
 /*   By: ciglesia <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 16:28:56 by ciglesia          #+#    #+#             */
-/*   Updated: 2020/08/30 12:34:52 by ciglesia         ###   ########.fr       */
+/*   Updated: 2020/09/06 22:08:11 by ciglesia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,7 @@ typedef struct		s_listi
 	struct s_listi	*next;
 }					t_listi;
 
+int					file_name(char *file, char *end);
 int					ft_mod(int a, int b);
 int					ft_isint(char *str);
 int					ft_printf(const char *format, ...);
