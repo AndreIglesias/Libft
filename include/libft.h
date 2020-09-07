@@ -6,7 +6,7 @@
 /*   By: ciglesia <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 16:28:56 by ciglesia          #+#    #+#             */
-/*   Updated: 2020/09/06 22:08:11 by ciglesia         ###   ########.fr       */
+/*   Updated: 2020/09/07 19:58:26 by ciglesia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -120,6 +120,9 @@ int					ft_strnequ(char const *s1, char const *s2, size_t n);
 char				*ft_strsub(char const *s, unsigned int start, size_t len);
 char				*ft_strjoin(char const *s1, char const *s2);
 char				*ft_strtrim(char const *s);
+char				**ft_decompose(char **tab, char *str, int spos, char *c);
+int					ft_count_words(char *str, int spos, int cont, char *c);
+char				**ft_split(char const *s, char *c);
 char				**ft_strsplit(char const *s, char c);
 char				*ft_itoa(int n);
 int					ft_repet(char c, int i);

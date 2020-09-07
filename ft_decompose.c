@@ -1,42 +1,56 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strsplit.c                                      :+:      :+:    :+:   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ciglesia <ciglesia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/08/13 20:41:03 by ciglesia          #+#    #+#             */
-/*   Updated: 2020/09/07 19:59:05 by ciglesia         ###   ########.fr       */
+/*   Created: 2020/09/07 19:46:06 by ciglesia          #+#    #+#             */
+/*   Updated: 2020/09/07 19:54:51 by ciglesia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int		skip_spaces(char *str, int pos, char c)
+static int		every_char(char *str, int pos, char *c)
 {
-	while (str[pos] && str[pos] == c)
+	int i;
+
+	i = 0;
+	while (c[i])
+    {
+		if (str[pos] == c[i])
+			return (1);
+		i++;
+    }
+	return (0);
+}
+
+static int		skip_spaces(char *str, int pos, char *c)
+{
+	while (str[pos] && every_char(str, pos, c))
 		pos++;
 	return (pos);
 }
 
-static int		ft_count_letters(char *str, int letrs, char c)
+static int		ft_count_letters(char *str, int letrs, char *c)
 {
-	while (str[letrs] && str[letrs] != c)
+	while (str[letrs] && !every_char(str, letrs, c))
 		letrs++;
 	return (letrs);
 }
 
-static int		ft_count_wordsc(char *str, int spos, int cont, char c)
+int				ft_count_words(char *str, int spos, int cont, char *c)
 {
 	spos = skip_spaces(str, spos, c);
 	if (!str[spos])
 		return (cont);
-	while (str[spos] && str[spos] != c)
+	while (str[spos] && !every_char(str, spos, c))
 		spos++;
-	return (ft_count_wordsc(str, spos, cont + 1, c));
+	return (ft_count_words(str, spos, cont + 1, c));
 }
 
-static char		**ft_decomposec(char **tab, char *str, int spos, char c)
+char			**ft_decompose(char **tab, char *str, int spos, char *c)
 {
 	int letrs;
 	int i;
@@ -52,7 +66,7 @@ static char		**ft_decomposec(char **tab, char *str, int spos, char c)
 		if (!(tab[tpos] = (char*)malloc(sizeof(char) * (letrs + 1 - spos))))
 			return (0);
 		i = 0;
-		while (str[spos] && str[spos] != c)
+		while (str[spos] && !every_char(str, spos, c))
 		{
 			tab[tpos][i] = str[spos];
 			spos++;
@@ -62,18 +76,4 @@ static char		**ft_decomposec(char **tab, char *str, int spos, char c)
 	}
 	tab[tpos] = 0;
 	return (tab);
-}
-
-char			**ft_strsplit(char const *s, char c)
-{
-	char	**tab;
-
-	if (s)
-	{
-		if (!(tab = (char**)malloc(sizeof(char*) *
-							(ft_count_wordsc((char*)s, 0, 0, c) + 1))))
-			return (NULL);
-		return (ft_decomposec(tab, (char*)s, 0, c));
-	}
-	return (NULL);
 }
