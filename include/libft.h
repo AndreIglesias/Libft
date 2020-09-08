@@ -6,7 +6,7 @@
 /*   By: ciglesia <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 16:28:56 by ciglesia          #+#    #+#             */
-/*   Updated: 2020/09/08 15:43:00 by ciglesia         ###   ########.fr       */
+/*   Updated: 2020/09/08 23:54:43 by ciglesia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,14 @@
 # define GRAY "\e[90m"
 # define E0M "\e[0m"
 
+typedef struct		s_coords
+{
+	int				x;
+	int				y;
+	int				i;
+	int				j;
+}					t_coords;
+
 typedef struct		s_list
 {
 	void			*obj;
@@ -59,6 +67,7 @@ int					ft_scmp(const char *s, const char *s1, const char *s2);
 int					ft_puterr(char const *s, int ex);
 int					exceeds_int(char *nb);
 int					free_split(char **strs);
+t_coords			ft_coordsplit(char **split, char *pos);
 char				*ft_itersplit(char **split, int i);
 intmax_t			ft_abs(intmax_t x);
 void				ft_freesv(char **m, char *end);
