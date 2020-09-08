@@ -6,7 +6,7 @@
 /*   By: ciglesia <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 16:28:56 by ciglesia          #+#    #+#             */
-/*   Updated: 2020/09/07 19:58:26 by ciglesia         ###   ########.fr       */
+/*   Updated: 2020/09/08 15:43:00 by ciglesia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,7 @@ int					ft_scmp(const char *s, const char *s1, const char *s2);
 int					ft_puterr(char const *s, int ex);
 int					exceeds_int(char *nb);
 int					free_split(char **strs);
+char				*ft_itersplit(char **split, int i);
 intmax_t			ft_abs(intmax_t x);
 void				ft_freesv(char **m, char *end);
 char				**ft_vstrdup(char **m, char *end);
