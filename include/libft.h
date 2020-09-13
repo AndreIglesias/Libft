@@ -6,7 +6,7 @@
 /*   By: ciglesia <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 16:28:56 by ciglesia          #+#    #+#             */
-/*   Updated: 2020/09/08 23:54:43 by ciglesia         ###   ########.fr       */
+/*   Updated: 2020/09/13 23:40:48 by ciglesia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,11 +94,13 @@ void				*ft_memchr(const void *s, int c, size_t n);
 char				*ft_strcat(char *restrict s1, const char *restrict s2);
 char				*ft_strchr(const char *s, int c);
 int					ft_strcmp(const char *s1, const char *s2);
+int					ft_strcmpn(const char *s1, const char *s2, const char *lim);
 char				*ft_strcpy(char *dst, const char *src);
 char				*ft_strdup(const char *s1);
 size_t				ft_strlcat(char *restrict dst, const char *restrict src,
 								size_t size);
 size_t				ft_strlen(const char *s);
+size_t				ft_sizei(int nb);
 char				*ft_strncat(char *restrict s1, const char *restrict s2,
 								size_t n);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
@@ -136,6 +138,7 @@ char				**ft_split(char const *s, char *c);
 char				**ft_strsplit(char const *s, char c);
 char				*ft_itoa(int n);
 int					ft_repet(char c, int i);
+int					ft_repet_fd(char c, int i, const int fd);
 int					ft_putchar(char c);
 int					ft_putstr(char const *s);
 void				ft_putendl(char const *s);
