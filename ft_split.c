@@ -1,21 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_mod.c                                           :+:      :+:    :+:   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ciglesia <ciglesia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/08/30 12:33:27 by ciglesia          #+#    #+#             */
-/*   Updated: 2020/09/01 17:01:11 by ciglesia         ###   ########.fr       */
+/*   Created: 2020/09/07 19:52:46 by ciglesia          #+#    #+#             */
+/*   Updated: 2020/09/07 19:54:28 by ciglesia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_mod(int a, int b)
+char			**ft_split(char const *s, char *c)
 {
-	int ret;
+	char	**tab;
 
-	ret = a%b;
-	return ((ret >= 0) ? ret : ret + b);
+	if (s)
+	{
+		if (!(tab = (char**)malloc(sizeof(char*) * (ft_count_words((char*)s, 0, 0, c) + 1))))
+			return (NULL);
+		return (ft_decompose(tab, (char*)s, 0, c));
+	}
+	return (NULL);
 }

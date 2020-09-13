@@ -1,21 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_mod.c                                           :+:      :+:    :+:   */
+/*   file_name.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ciglesia <ciglesia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/08/30 12:33:27 by ciglesia          #+#    #+#             */
-/*   Updated: 2020/09/01 17:01:11 by ciglesia         ###   ########.fr       */
+/*   Created: 2020/09/06 22:07:39 by ciglesia          #+#    #+#             */
+/*   Updated: 2020/09/06 22:10:24 by ciglesia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_mod(int a, int b)
+int		file_name(char *file, char *end)
 {
-	int ret;
+	unsigned int e;
+	int i;
 
-	ret = a%b;
-	return ((ret >= 0) ? ret : ret + b);
+	i = 0;
+	e = ft_strlen(end);
+	if (ft_strlen(file) < e)
+	{
+		ft_printf_fd(2, ERROR": %s: Not a %s file\n", file, end);
+		return (0);
+	}
+	while (file[i + e])
+		i++;
+	if (ft_strcmp(&file[i], end) != 0)
+	{
+		ft_printf_fd(2, ERROR": %s: Not a %s file\n", file, end);
+		return (0);
+	}
+	return (1);
 }

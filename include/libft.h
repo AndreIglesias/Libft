@@ -6,7 +6,7 @@
 /*   By: ciglesia <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 16:28:56 by ciglesia          #+#    #+#             */
-/*   Updated: 2020/08/30 12:34:52 by ciglesia         ###   ########.fr       */
+/*   Updated: 2020/09/08 23:54:43 by ciglesia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,14 @@
 # define GRAY "\e[90m"
 # define E0M "\e[0m"
 
+typedef struct		s_coords
+{
+	int				x;
+	int				y;
+	int				i;
+	int				j;
+}					t_coords;
+
 typedef struct		s_list
 {
 	void			*obj;
@@ -50,6 +58,7 @@ typedef struct		s_listi
 	struct s_listi	*next;
 }					t_listi;
 
+int					file_name(char *file, char *end);
 int					ft_mod(int a, int b);
 int					ft_isint(char *str);
 int					ft_printf(const char *format, ...);
@@ -58,6 +67,8 @@ int					ft_scmp(const char *s, const char *s1, const char *s2);
 int					ft_puterr(char const *s, int ex);
 int					exceeds_int(char *nb);
 int					free_split(char **strs);
+t_coords			ft_coordsplit(char **split, char *pos);
+char				*ft_itersplit(char **split, int i);
 intmax_t			ft_abs(intmax_t x);
 void				ft_freesv(char **m, char *end);
 char				**ft_vstrdup(char **m, char *end);
@@ -119,6 +130,9 @@ int					ft_strnequ(char const *s1, char const *s2, size_t n);
 char				*ft_strsub(char const *s, unsigned int start, size_t len);
 char				*ft_strjoin(char const *s1, char const *s2);
 char				*ft_strtrim(char const *s);
+char				**ft_decompose(char **tab, char *str, int spos, char *c);
+int					ft_count_words(char *str, int spos, int cont, char *c);
+char				**ft_split(char const *s, char *c);
 char				**ft_strsplit(char const *s, char c);
 char				*ft_itoa(int n);
 int					ft_repet(char c, int i);

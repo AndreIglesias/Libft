@@ -1,21 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_mod.c                                           :+:      :+:    :+:   */
+/*   ft_coordsplit.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ciglesia <ciglesia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/08/30 12:33:27 by ciglesia          #+#    #+#             */
-/*   Updated: 2020/09/01 17:01:11 by ciglesia         ###   ########.fr       */
+/*   Created: 2020/09/08 23:51:49 by ciglesia          #+#    #+#             */
+/*   Updated: 2020/09/08 23:53:52 by ciglesia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_mod(int a, int b)
+t_coords	ft_coordsplit(char **split, char *pos)
 {
-	int ret;
+	int x;
+	int y;
+	t_coords c;
 
-	ret = a%b;
-	return ((ret >= 0) ? ret : ret + b);
+	x = 0;
+	c.i = -1;
+	c.j = -1;
+	c.x = -1;
+	c.y = -1;
+	while (split[x])
+	{
+		y = 0;
+		while (split[x][y])
+		{
+			if (&split[x][y] == pos)
+			{
+				c.i = x;
+				c.j = y;
+				return (c);
+			}
+			y++;
+		}
+		x++;
+	}
+	return (c);
 }
