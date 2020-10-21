@@ -6,11 +6,11 @@
 /*   By: user <ciglesia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/25 18:26:11 by user              #+#    #+#             */
-/*   Updated: 2020/08/25 17:30:48 by ciglesia         ###   ########.fr       */
+/*   Updated: 2020/10/21 16:47:17 by ciglesia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
 int	ft_putoxx(t_flags flags, char *s, int n, int b)
 {

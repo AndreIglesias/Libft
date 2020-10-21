@@ -6,11 +6,11 @@
 /*   By: ciglesia <ciglesia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/21 13:11:20 by ciglesia          #+#    #+#             */
-/*   Updated: 2020/08/21 14:37:18 by ciglesia         ###   ########.fr       */
+/*   Updated: 2020/10/21 16:46:57 by ciglesia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
 static int	size_number(uintmax_t value, int base)
 {

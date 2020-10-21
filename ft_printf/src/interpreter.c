@@ -6,11 +6,11 @@
 /*   By: ciglesia <ciglesia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/03 02:25:56 by ciglesia          #+#    #+#             */
-/*   Updated: 2020/07/12 19:24:51 by ciglesia         ###   ########.fr       */
+/*   Updated: 2020/10/21 16:45:40 by ciglesia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
 t_flags	ft_flags(const char *format, t_flags flags)
 {

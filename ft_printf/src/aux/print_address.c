@@ -6,11 +6,11 @@
 /*   By: ciglesia <ciglesia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/05 00:04:45 by ciglesia          #+#    #+#             */
-/*   Updated: 2020/08/25 17:26:46 by ciglesia         ###   ########.fr       */
+/*   Updated: 2020/10/21 16:46:39 by ciglesia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
 char	hex_digit(int n)
 {

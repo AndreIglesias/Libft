@@ -6,7 +6,7 @@
 /*   By: ciglesia <ciglesia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/31 15:34:38 by ciglesia          #+#    #+#             */
-/*   Updated: 2020/08/25 16:50:34 by ciglesia         ###   ########.fr       */
+/*   Updated: 2020/10/21 16:45:20 by ciglesia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 **	%<m$>[flag/s][*m$][.*m$][length mod]<conversion specifier> (not handeled)
 */
 
-#include "ft_printf.h"
+#include "libft.h"
 
 /*
 ** id_format.c: init_flags
