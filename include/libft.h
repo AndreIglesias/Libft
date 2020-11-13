@@ -6,7 +6,7 @@
 /*   By: ciglesia <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 16:28:56 by ciglesia          #+#    #+#             */
-/*   Updated: 2020/11/13 14:47:07 by ciglesia         ###   ########.fr       */
+/*   Updated: 2020/11/13 14:57:44 by ciglesia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@
 # define REVER "\e[7m"
 # define INVIS "\e[8m"
 # define RED "\e[38;2;255;0;0m"
+# define CEL "\e[38;2;114;159;207m"
 # define GREEN "\e[92m"
 # define CYAN "\e[96m"
 # define BLUE "\e[34m"
