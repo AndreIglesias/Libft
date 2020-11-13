@@ -6,7 +6,7 @@
 /*   By: ciglesia <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 16:28:56 by ciglesia          #+#    #+#             */
-/*   Updated: 2020/09/13 23:40:48 by ciglesia         ###   ########.fr       */
+/*   Updated: 2020/11/13 14:47:07 by ciglesia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -112,6 +112,7 @@ char				*ft_strnstr(const char *haystack, const char *needle,
 int					ft_tolower(int c);
 int					ft_toupper(int c);
 size_t				ft_strlen(const char *s);
+char				*ft_lowercase(char *str);
 int					ft_isdigit(int n);
 int					ft_isalpha(int c);
 int					ft_isprint(int c);
