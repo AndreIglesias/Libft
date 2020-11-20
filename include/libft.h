@@ -6,7 +6,7 @@
 /*   By: ciglesia <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 16:28:56 by ciglesia          #+#    #+#             */
-/*   Updated: 2020/11/18 00:07:24 by ciglesia         ###   ########.fr       */
+/*   Updated: 2020/11/20 16:33:09 by ciglesia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,6 +78,7 @@ char				*ft_fillstr(char c, int q);
 char				*ft_chgchr(char *s, char old, char nw);
 double				ft_sqrt(int n);
 int					ft_countchr(const char *s, int c);
+char				*ft_emptydots(char *str);
 int					get_next_line(int const fd, char **line);
 int					get_next_line2(const int fd, char **line, char **pitcher);
 char				*ft_strndup(const char *s, size_t n);
@@ -101,7 +102,7 @@ char				*ft_strdup(const char *s1);
 size_t				ft_strlcat(char *restrict dst, const char *restrict src,
 								size_t size);
 size_t				ft_strlen(const char *s);
-size_t				ft_sizei(int nb);
+size_t				ft_sizei(size_t nb);
 char				*ft_strncat(char *restrict s1, const char *restrict s2,
 								size_t n);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);

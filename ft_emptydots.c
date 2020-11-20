@@ -1,28 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_sizei.c                                         :+:      :+:    :+:   */
+/*   ft_emptydots.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ciglesia <ciglesia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/13 22:38:55 by ciglesia          #+#    #+#             */
-/*   Updated: 2020/11/20 16:32:58 by ciglesia         ###   ########.fr       */
+/*   Created: 2020/11/20 11:19:04 by ciglesia          #+#    #+#             */
+/*   Updated: 2020/11/20 12:04:06 by ciglesia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_sizei(size_t nb)
+char	*ft_emptydots(char *str)
 {
-	int i;
+	char	*new;
+	size_t	dots;
+	int		i;
+	int		j;
 
-	if (nb == 0)
-		return (1);
+	dots = ft_countchr(str, '.');
+	if (dots == ft_strlen(str))
+		return (ft_strdup(str));
+	new = ft_strnew(ft_strlen(str) - dots);
 	i = 0;
-	while (nb)
+	j = 0;
+	while (str[i])
 	{
-		nb /= 10;
+		if (str[i] != '.')
+			new[j++] = str[i];
 		i++;
 	}
-	return (i);
+	new[j] = '\0';
+	free(str);
+	return (new);
 }
