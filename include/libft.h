@@ -6,7 +6,7 @@
 /*   By: ciglesia <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 16:28:56 by ciglesia          #+#    #+#             */
-/*   Updated: 2020/11/20 19:55:29 by ciglesia         ###   ########.fr       */
+/*   Updated: 2020/11/21 20:36:57 by ciglesia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -171,6 +171,8 @@ unsigned char		ft_swap_bits(unsigned char octet);
 int					ft_ulstr(char *str);
 t_listi				*ft_sort_list(t_listi *lst, int (*cmp)(int, int));
 void				ft_sorting(t_list *list, void f(t_list *));
+void				ft_quicksort(t_list **list, size_t size, int f(t_list *,
+																	t_list *));
 char				*ft_strrev(char *str, int size);
 char				*ft_itoa_base(int value, int base);
 
